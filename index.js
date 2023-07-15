@@ -1,5 +1,5 @@
-const express = require("express");
-const fs = require("fs");
+import express from "express";
+import fs from "fs";
 
 const PORT = "40281"
 
@@ -10,6 +10,10 @@ console.log("www dir: ", process.env.WWWDIR);
 
 
 app.use(express.json({type: "text/plain"}));
+
+//==============//
+// GET REQUESTS //
+//==============//
 
 app.get("/api/blog*", (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -22,7 +26,19 @@ app.get("/api/blog*", (req, res) => {
             }
         ]
     }));
-})
+});
+
+app.get("/api/project*", (req, res) => {
+    console.log("Requested from projects");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    
+});
+
+
+
+//===============//
+// POST REQUESTS //
+//===============//
 
 app.post("/api/contactForm", (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
