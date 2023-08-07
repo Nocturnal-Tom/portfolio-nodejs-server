@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-all main.ts",
+    "run": "deno run --allow-all main.ts"
+  },
+  "imports": {
+    "express": "npm:express",
+    "prisma": "npm:prisma"
+  }
+}
