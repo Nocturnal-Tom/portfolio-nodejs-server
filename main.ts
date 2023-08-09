@@ -8,5 +8,6 @@ export function add(a: number, b: number): number {
 if (import.meta.main) {
   console.log("Add 2 + 3 =", add(2, 3));
 }
-prisma.
+
+
 console.log(prisma)
